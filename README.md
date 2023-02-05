@@ -13,7 +13,7 @@ Code and other resources for the submission of Improving the Expressiveness of K
   
   currently the code only supports 1-layer SEK-PPGN, which is used in our experiment. The dataset will be automatically preprocessed.
   
-  *** Subgraph Count Dataset
+  ### Subgraph Count Dataset
   1. To run SEK-GIN, please follow these steps:
    i) Preprocessing dataset. In the root directory, run `python SubgraphCount.py`, it will generate the GraphCount dataset suitable for SEK-GIN, and preprocess it for SEK-GNN.
    ii) To try our code, use the code `run_subgraph_count.py`, for complete arguments, please see the detailed code and comment in run_subgraph_count.py. For example, to run a 5-layer 6-hop SEK-GIN with geometric combine function and attention-based pooling function for task 1, run the following code(for GraphCount dataset, the pooling method is default to be attention, no choice is provided in the command line):
@@ -24,7 +24,7 @@ Code and other resources for the submission of Improving the Expressiveness of K
     
       ```python run_graphcount_ppgn.py --use_ppgn 1 --hop 3 --task 1``` 
       
-  *** TU Dataset
+  ### TU Dataset
   1. Dataset preprocessing
   To preprocess dataset, run `python dataset_processing.py --dataset_name ${dataset_name}` in root directory, e.g.,
   
@@ -42,7 +42,7 @@ Code and other resources for the submission of Improving the Expressiveness of K
   The experimental data will be saved in the disk, then run `python show_results.py --which_dataset ${dataset_name}`, this will calculate the final result in both settings described in the paper and save a csv file named `results.csv` in the root directory. 
 
 
-*** QM9 Dataset
+### QM9 Dataset
 1. Preprocess dataset
 To download and preprocess the dataset, go to directory `QM9/`, and run `python QM9Dataset.py`.
 
