@@ -2,7 +2,9 @@
 Code and other resources for the submission of `Improving the Expressiveness of K-hop Message Passing GNNs by Injecting Contextualized Substructure Information`
 ### Graph Property Dataset
 1. To run SEK-GIN, please follow these steps:
+
    i) Preprocessing dataset. In the root directory, run `python data_pna.py`, it will generate the GraphProperty dataset suitable for SEK-GIN, and preprocess it for SEK-GNN.
+
    ii) To try our code, run `python run_graph_property.py --use_both --mhc_layer_num ${SEK-GIN layer number} --mhc_num_hops ${number of hops} --lr ${lr_value} --weigfht_decay ${l2_wd value} --pooling_method ${Pooling Method} --combine ${combine method} --task ${task_id}`, for complete arguments, please see the detailed code and comment in run_graph_property.py. For example, to run a 5-layer 6-hop SEK-GIN with geometric combine function and attention-based pooling function for task 0, run the following code:
      
      ```python run_graph_property.py --use_both --mhc_layer_num 5 --mhc_num_hops 6 --lr 8e-3 --pooling_method attention --combine geometric --task 0```
@@ -15,7 +17,9 @@ Code and other resources for the submission of `Improving the Expressiveness of 
   
   ### Subgraph Count Dataset
   1. To run SEK-GIN, please follow these steps:
+   
    i) Preprocessing dataset. In the root directory, run `python SubgraphCount.py`, it will generate the GraphCount dataset suitable for SEK-GIN, and preprocess it for SEK-GNN.
+   
    ii) To try our code, use the code `run_subgraph_count.py`, for complete arguments, please see the detailed code and comment in run_subgraph_count.py. For example, to run a 5-layer 6-hop SEK-GIN with geometric combine function and attention-based pooling function for task 1, run the following code(for GraphCount dataset, the pooling method is default to be attention, no choice is provided in the command line):
      
      ```python run_subgraph_count.py --use_both --mhc_layer_num 5 --mhc_num_hops 6 --lr 8e-3 --combine geometric --task 0```
@@ -26,11 +30,13 @@ Code and other resources for the submission of `Improving the Expressiveness of 
       
   ### TU Dataset
   1. Dataset preprocessing
+  
   To preprocess dataset, run `python dataset_processing.py --dataset_name ${dataset_name}` in root directory, e.g.,
   
       ```python dataset_processing.py --dataset_name PROTEINS``` 
   
   2. Run 10 folds in parallel
+  
   To make the code efficient, our code runs 10 folds in parallel using `run_tu_cmd_fold_parallel.py`. For example, to run experiment on MUTAG dataset using a 2-layer 2-hop SEK-GIN with geometric combine function, run the following command:
   
       ```python run_tu_cmd_fold_parallel.py --dataset_name MUTAG --combine geometric --layer_num 2 --num_hops 2```
