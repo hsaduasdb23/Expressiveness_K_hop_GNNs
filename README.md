@@ -1,5 +1,5 @@
 # Expressiveness_K_hop_GNNs
-Code and other resources for the submission of Improving the Expressiveness of K-hop Message Passing GNNs by Injecting Contextualized Substructure Information
+Code and other resources for the submission of `Improving the Expressiveness of K-hop Message Passing GNNs by Injecting Contextualized Substructure Information`
 ### Graph Property Dataset
 1. To run SEK-GIN, please follow these steps:
    i) Preprocessing dataset. In the root directory, run `python data_pna.py`, it will generate the GraphProperty dataset suitable for SEK-GIN, and preprocess it for SEK-GNN.
