@@ -22,7 +22,7 @@ Code and other resources for the submission of `Improving the Expressiveness of 
    
    ii) To try our code, use the code `run_subgraph_count.py`, for complete arguments, please see the detailed code and comment in run_subgraph_count.py. For example, to run a 5-layer 6-hop SEK-GIN with geometric combine function and attention-based pooling function for task 1, run the following code(for GraphCount dataset, the pooling method is default to be attention, no choice is provided in the command line):
      
-     ```python run_subgraph_count.py --use_both --mhc_layer_num 5 --mhc_num_hops 6 --lr 8e-3 --combine geometric --task 0```
+     ```python run_subgraph_count.py --mhc_layer_num 5 --mhc_num_hops 6 --lr 8e-3 --combine geometric --task 0```
   
   2. To run SEK-PPGN, go to `GraphCount/` directory, and then use the provided code `run_graphcount_ppgn.py`, e.g., to run 1-layer 3-hop SEK-PPGN for task 1, run the following code:
     
