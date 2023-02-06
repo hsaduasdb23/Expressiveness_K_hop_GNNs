@@ -1,5 +1,8 @@
 # Expressiveness_K_hop_GNNs
-Code and other resources for the submission of `Improving the Expressiveness of K-hop Message Passing GNNs by Injecting Contextualized Substructure Information`
+Code and other resources for the submission of `Improving the Expressiveness of K-hop Message Passing GNNs by Injecting Contextualized Substructure Information`, the architecture of SEK-GNN is illustrated in the figure:
+
+![image](https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/sek-gnn-figure.pdf)
+
 ### Graph Property Dataset
 1. To run SEK-GIN, please follow these steps:
 
