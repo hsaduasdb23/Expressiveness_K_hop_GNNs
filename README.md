@@ -76,7 +76,7 @@ For TU dataset, one can use `--search` argument and run the command `python run_
 
 2. Other datasets
 
-For GraphProperty dataset, GraphCount and QM9 dataset, it is recommended to use the command provided earlier and use TMUX to open multiple windows to try various hyperparameter combinations as suggested in the Experiment Setting section in the paper.
+For GraphProperty dataset, GraphCount and QM9 dataset, as the search space is not large, it is recommended to use the command provided earlier and TMUX to open multiple windows to try various hyperparameter combinations as suggested in the Experiment Setting section in the paper.
 
 
 ### Experiment Result
