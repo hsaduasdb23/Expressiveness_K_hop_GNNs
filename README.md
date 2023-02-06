@@ -60,3 +60,12 @@ To run the experiment for a 6-layer 5-hop SEK-GIN with geometric combine functio
 
 For a detailed explanation for each argument, see the code and comments in `run_QM9.py`.
 
+
+### Reproducibility
+1. TU dataset
+
+For TU dataset, one can use `--search` argument and run the command `python run_tu_cmd_fold_parallel.py --dataset_name MUTAG --search ` to reproduce the result, as mentioned earlier.
+
+2. Other datasets
+
+For GraphProperty dataset, GraphCount and QM9 dataset, it is recommended to use the command provided earlier and use TMUX to open multiple windows to try various hyperparameter combinations as suggested in the Experiment Setting section in the paper.
