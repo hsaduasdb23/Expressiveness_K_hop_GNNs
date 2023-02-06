@@ -1,7 +1,7 @@
 # Expressiveness_K_hop_GNNs
 Code and other resources for the submission of `Improving the Expressiveness of K-hop Message Passing GNNs by Injecting Contextualized Substructure Information`, the architecture of SEK-GNN is illustrated in the figure:
 
-![image](https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/sek-gnn-figure.pdf)
+<img src="https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/sek-gnn.png" width="600" height="380" alt="SEK-GNN Architecture"/><br/>
 
 ### Graph Property Dataset
 1. To run SEK-GIN, please follow these steps:
@@ -72,3 +72,14 @@ For TU dataset, one can use `--search` argument and run the command `python run_
 2. Other datasets
 
 For GraphProperty dataset, GraphCount and QM9 dataset, it is recommended to use the command provided earlier and use TMUX to open multiple windows to try various hyperparameter combinations as suggested in the Experiment Setting section in the paper.
+
+
+### Experiment Result
+
+#### Synthetic dataset
+
+
+#### TU dataset
+
+
+#### QM9 dataset
