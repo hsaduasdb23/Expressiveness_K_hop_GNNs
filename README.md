@@ -5,7 +5,7 @@ This repository contains code and other resources for the submission: `Improving
 
 ### Code Dependencies
 
-The code relies on the following libraries: i)Pytorch ii) Pytorch-Geometric iii) numpy iv) pandas v) pytorch-lightning vi) scikit-learn  vii) termcolor
+The code relies on the following libraries: i)Pytorch ii) Pytorch-Geometric iii) Numpy iv) Pandas v) Pytorch-Lightning vi) Scikit-Learn  vii) TermColor
 
 
 ### Graph Property Dataset
