@@ -77,7 +77,9 @@ For GraphProperty dataset, GraphCount and QM9 dataset, it is recommended to use 
 ### Experiment Result
 
 #### Synthetic dataset
+https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/gp_result.png
 
+<img src="https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/gp_result.png" width="700" height="320" alt="GPGC"/><br/>
 
 #### TU dataset
 
