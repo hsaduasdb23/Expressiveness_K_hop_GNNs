@@ -3,6 +3,11 @@ Code and other resources for the submission of `Improving the Expressiveness of 
 
 <img src="https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/sek-gnn.png" width="600" height="380" alt="SEK-GNN Architecture"/><br/>
 
+### Code Dependencies
+
+The code relies on the following libraries: i)Pytorch ii) Pytorch-Geometric iii) numpy iv) pandas v) pytorch-lightning vi) scikit-learn  vii) termcolor
+
+
 ### Graph Property Dataset
 1. To run SEK-GIN, please follow these steps:
 
