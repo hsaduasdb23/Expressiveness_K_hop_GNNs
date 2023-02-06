@@ -76,7 +76,6 @@ def run_one_fold(dataset_train,dataset_valid,dataset_test,out_dim,only_base_gnn,
                          # enable_progress_bar=True)
     trainer = pl.Trainer(default_root_dir='saved_models/graphProperty/',max_epochs=max_epochs,accelerator='cpu' if not use_cuda else 'gpu',devices=1,enable_progress_bar=True,logger=False,callbacks=[ModelCheckpoint(save_weights_only=True, mode="min", monitor="val_loss")])
     trainer.fit(model=model, train_dataloaders=train_loader, val_dataloaders=val_loader)
-    print ('loading')
     model = model.load_from_checkpoint(trainer.checkpoint_callback.best_model_path)
     best_model = model.global_model
     test_mae = []
@@ -103,7 +102,7 @@ if __name__ =='__main__':
     # base_dropout=0.5,mhc_dropout=0.5,base_layer=2,
     # mhc_layer=1,mhc_num_hops=3,lr=5e-3,weight_decay=1e-5,is_tudataset=False,epochs=100
 
-    parser = argparse.ArgumentParser(description='run experiment on M2HC GNN')
+    parser = argparse.ArgumentParser(description='run experiment on SEK GNN')
     parser.add_argument('--dataset_name', type=str, default='pna-simulation',
                         help='which dataset to use')
     parser.add_argument('--out_dim', type=int, default=64,
@@ -113,8 +112,8 @@ if __name__ =='__main__':
     parser.add_argument('--base_gnn', type=str, default='GIN',
                         help='which base model to use')
     parser.add_argument('--only_mhc', action='store_true', default=False,
-                        help='use only SEK-GNN')
-    parser.add_argument('--use_both', action='store_true', default=False,
+                        help='use SEK-GNN')
+    parser.add_argument('--use_both', action='store_false', default=True,
                         help='use SEK-GIN')
     parser.add_argument('--base_dropout', type=float, default=0.0,
                         help='Base GNN dropout rate')
