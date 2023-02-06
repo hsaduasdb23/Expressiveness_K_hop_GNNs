@@ -5,9 +5,9 @@ Code and other resources for the submission of `Improving the Expressiveness of 
 
    i) Preprocessing dataset. In the root directory, run `python data_pna.py`, it will generate the GraphProperty dataset suitable for SEK-GIN, and preprocess it for SEK-GNN.
 
-   ii) To try our code, run `python run_graph_property.py --use_both --mhc_layer_num ${SEK-GIN layer number} --mhc_num_hops ${number of hops} --lr ${lr_value} --weigfht_decay ${l2_wd value} --pooling_method ${Pooling Method} --combine ${combine method} --task ${task_id}`, for complete arguments, please see the detailed code and comment in run_graph_property.py. For example, to run a 5-layer 6-hop SEK-GIN with geometric combine function and attention-based pooling function for task 0, run the following code:
+   ii) To try our code, use the code from `run_graph_property.py`, for complete arguments, please see the detailed code and comment in run_graph_property.py. For example, to run a 5-layer 6-hop SEK-GIN with geometric combine function and attention-based pooling function for task 0, run the following code:
      
-     ```python run_graph_property.py --use_both --mhc_layer_num 5 --mhc_num_hops 6 --lr 8e-3 --pooling_method attention --combine geometric --task 0```
+     ```python run_graph_property.py --mhc_layer_num 5 --mhc_num_hops 6 --lr 8e-3 --pooling_method attention --combine geometric --task 0```
 
 2. To run SEK-PPGN, go to `GraphProperty/` directory, and then use the provided code `run_gp_ppgn.py`, e.g., to run 1-layer 3-hop SEK-PPGN for task 1, run the following code:
   
