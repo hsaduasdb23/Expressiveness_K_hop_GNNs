@@ -108,7 +108,7 @@ if __name__ =='__main__':
     # base_dropout=0.5,mhc_dropout=0.5,base_layer=2,
     # mhc_layer=1,mhc_num_hops=3,lr=5e-3,weight_decay=1e-5,is_tudataset=False,epochs=100
 
-    parser = argparse.ArgumentParser(description='run experiment on M2HC GNN')
+    parser = argparse.ArgumentParser(description='run experiment on SEK GNN')
     parser.add_argument('--dataset_name', type=str, default='subgraph_count',
                         help='which dataset to use')
     parser.add_argument('--out_dim', type=int, default=64,
@@ -119,7 +119,7 @@ if __name__ =='__main__':
                         help='which base model to use')
     parser.add_argument('--only_mhc', action='store_true', default=False,
                         help='only use SEK-GNN')
-    parser.add_argument('--use_both', action='store_true', default=False,
+    parser.add_argument('--use_both', action='store_false', default=True,
                         help='use SEK-GIN')
     parser.add_argument('--base_dropout', type=float, default=0.,
                         help='Base GNN dropout rate')
@@ -144,9 +144,9 @@ if __name__ =='__main__':
     parser.add_argument('--separate_conv', type=int, default=1,
                         help='use separate model params for each k-hop layer or not')
     parser.add_argument('--jk', type=str, default='concat',
-                        help='concat or last')
+                        help='choice is:{concat,last}')
     parser.add_argument('--feature_fusion', type=str, default='average',
-                        help='use average or weighted average for feature fusion')
+                        help='use average or weighted average for feature fusion,choice is:(average,weighted)')
     parser.add_argument('--combine', type=str, default='geometric',
                         help='geometric or add')
     parser.add_argument('--mhc_layer_name', type=str, default='gin',
