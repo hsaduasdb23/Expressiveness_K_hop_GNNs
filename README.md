@@ -1,7 +1,7 @@
 # Substructure Enhanced K-hop Message-Passing GNNs
 This repository contains code and other resources for the submission: `Improving the Expressiveness of K-hop Message Passing GNNs by Injecting Contextualized Substructure Information`, the architecture of SEK-GNN is illustrated in the figure:
 
-<img src="https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/sek-gnn.png" width="600" height="380" alt="SEK-GNN Architecture"/><br/>
+<img src="https://github.com/hsaduasdb23/Expressiveness_K_hop_GNNs/blob/main/sek-gnn.png" width="400" height="220" alt="SEK-GNN Architecture"/><br/>
 
 ### Code Dependencies
 
