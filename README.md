@@ -11,7 +11,7 @@ The code relies on the following libraries: i)Pytorch ii) Pytorch-Geometric iii)
 ### Graph Property Dataset
 1. To run SEK-GIN, please follow these steps:
 
-   i) Preprocessing dataset. In the root directory, run `python data_pna.py`, it will generate the GraphProperty dataset suitable for SEK-GIN, and preprocess it for SEK-GNN.
+   i) Preprocessing dataset. In the root directory, run `python data_pna.py`, it will generate the GraphProperty dataset suitable for SEK-GIN, and preprocess it.
 
    ii) To try our code, use the code from `run_graph_property.py`, for complete arguments, please see the detailed code and comment in run_graph_property.py. For example, to run a 5-layer 6-hop SEK-GIN with geometric combine function and attention-based pooling function for task 0, run the following code:
      
