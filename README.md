@@ -7,6 +7,7 @@ This repository contains code and other resources for the submission: `Improving
 
 The code relies on the following libraries: i)Pytorch ii) Pytorch-Geometric iii) Numpy iv) Pandas v) Pytorch-Lightning vi) Scikit-Learn  vii) TermColor
 
+## How to run the experiment
 
 ### Graph Property Dataset
 1. To run SEK-GIN, please follow these steps:
