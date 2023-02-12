@@ -5,7 +5,9 @@ This repository contains code and other resources for the submission: `Improving
 
 ### Code Dependencies
 
-The code relies on the following libraries: i)Pytorch ii) Pytorch-Geometric iii) Numpy iv) Pandas v) Pytorch-Lightning vi) Scikit-Learn  vii) TermColor
+The code relies on the following libraries: 
+
+1) Pytorch 2) Pytorch-Geometric 3) Numpy 4) Pandas 5) Pytorch-Lightning 6) Scikit-Learn  7) TermColor 8) nvidia-smi 9) schedule 10) datetime 11) argparse 12) glob
 
 ## How to run the experiment
 
