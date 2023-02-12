@@ -1,9 +1,9 @@
+import numpy as np
 import pickle
 import sys
 import os
 from os import path
 import shutil
-import numpy as np
 import argparse
 from glob import glob
 import torch
