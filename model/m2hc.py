@@ -6,7 +6,7 @@ from torch_geometric.nn import GINConv, global_mean_pool, global_add_pool,GCNCon
 from torch import nn
 import sys
 sys.path.append('..')
-from nov.dataset_processing import Processed_Dataset
+from dataset_processing import Processed_Dataset
 from torch_geometric.data import DataLoader
 
 
