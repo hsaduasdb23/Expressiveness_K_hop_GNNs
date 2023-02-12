@@ -63,7 +63,7 @@ def run_one_fold(dataset,out_dim,only_base_gnn,only_mhc,use_together,base_gnn_st
 
     # in_dim = dataset.num_features + dataset[0].rw_feature.shape[1]   # in_dim is the concat of raw feature and rw feature
     model = Model(dataset,out_dim,only_base_gnn,only_mhc,use_together,base_gnn_str,base_dropout,mhc_layer,mhc_dropout,base_layer,mhc_num_layers,mhc_num_hops,separate_conv,jk,feature_fusion,combine,lr,weight_decay,task_id=task,use_ppgn=use_ppgn)
-    a = sio.loadmat('data/subgraph_count_ppgn/raw/randomgraph.mat')
+    a = sio.loadmat('data/subgraph_count/raw/randomgraph.mat')
     train_idx,val_idx,test_idx = a['train_idx'],a['val_idx'],a['test_idx']
     std_val = dataset.data.y[:,task].std()
     mean_val = dataset.data.y[:,task].mean()
