@@ -42,7 +42,7 @@ The code relies on the following libraries: i)Pytorch ii) Pytorch-Geometric iii)
   
   To preprocess dataset, run `python dataset_processing.py --dataset_name ${dataset_name}` in root directory, e.g.,
   
-      ```python dataset_processing.py --dataset_name PROTEINS``` 
+      ```python dataset_processing.py --dataset_name MUTAG``` 
   
   2. Run 10 folds in parallel
   
