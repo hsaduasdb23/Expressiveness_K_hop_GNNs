@@ -10,7 +10,6 @@ import torch.nn.functional as F
 import torch.optim as optim
 import pytorch_lightning as pl
 from torchmetrics import AUROC,Accuracy
-from send_email import send_email
 
 # self,dataset,out_dim,only_base_gnn,only_mhc,use_together,Base_GNN=None,base_dropout=0.5,ks_layer='gcn',mhc_dropout=0.5,base_layer=2,mhc_layer=1,mhc_num_hops=3,separate_conv = True,jk = 'concat',feature_fusion='weighted',combine='geometric', *args, **kwargs):
 
