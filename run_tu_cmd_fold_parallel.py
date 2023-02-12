@@ -114,7 +114,7 @@ if __name__ =='__main__':
         print(
             colored(f'currently running {cur_cmd},there are {N - cur_cmd} remaining to run', 'red',
                     'on_yellow'))
-        if cur_cmd>=N-1:
+        if cur_cmd>=N:
             print (colored('done running cmds','red','on_blue'))
             schedule.cancel_job(job)
             exit()
@@ -131,7 +131,7 @@ if __name__ =='__main__':
                 schedule.cancel_job(job)
                 exit()
 
-    job=schedule.every(2).minutes.do(run_job)
+    job=schedule.every(1).minutes.do(run_job)
 
     while True:
         schedule.run_pending()
