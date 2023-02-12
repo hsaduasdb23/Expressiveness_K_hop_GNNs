@@ -47,7 +47,7 @@ if __name__ =='__main__':
                         help='number of layers in SEK-GNN')
     parser.add_argument('--num_hops', type=int, default=2,
                         help='number of hops in SEK-GNN')
-    parser.add_argument('--search', action='store_false', default=True,
+    parser.add_argument('--search', action='store_true', default=False,
                         help='search hyperparams for TU dataset')
     # parser.add_argument('--fold_index', type=int, default=0,
     #                     help='which dataset to use')
