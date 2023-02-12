@@ -112,13 +112,13 @@ if __name__ =='__main__':
         N = len(cmd_list)
         global cur_cmd,fail_cnt
         print(
-            colored(f'currently running {cur_cmd},there are {N - cur_cmd} remaining to run', 'red',
+            colored(f'Please make sure there are 50% of free GPU memory to run the code, otherwise it sill stuck. currently running {cur_cmd},there are {N - cur_cmd} remaining to run', 'red',
                     'on_yellow'))
         if cur_cmd>=N:
             print (colored('done running cmds','red','on_blue'))
             schedule.cancel_job(job)
             exit()
-        if check_memory()>0.25:
+        if check_memory()>0.5:
             fail_cnt = 0
             code = os.system(cmd_list[cur_cmd])
             print (colored(f'code status:{code}, currently running {cur_cmd},there are {N-cur_cmd} remaining to run','red','on_yellow'))
