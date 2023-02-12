@@ -98,13 +98,10 @@ if __name__ =='__main__':
                                 else:
                                     cmd = f"python run_tu.py --fold_index {fo} --dataset_name {dataset_name}  --out_dim {out_dim} --only_mhc  --base_gnn GIN --mhc_layer_num {layer} --mhc_num_hops {hop} --weight_decay {weight_decay}  --lr 5e-3  --max_epochs {max_epoch}  --separate_conv {s} --jk concat --feature_fusion {f} --combine {c}  --mhc_layer_name {name} & "
                                 final_cmd += cmd
-                            print ('------------------------------------------------------------------------------------')
-                            print ('combine:',c,'feature fusion:',f,'sep conv:',s,'use both:',u,'layer_config:',layer,hop,name)
                             cmd_list.append(final_cmd)
                             cnt +=1
-                            print ('\n')
                             final_cmd = ''
-                            print('------------------------------------------------------------------------------------')
+                            
 
 
     # shutil.rmtree('logV2/')
@@ -121,7 +118,7 @@ if __name__ =='__main__':
             print (colored('done running cmds','red','on_blue'))
             schedule.cancel_job(job)
             exit()
-        if check_memory()>0.5:
+        if check_memory()>0.25:
             fail_cnt = 0
             code = os.system(cmd_list[cur_cmd])
             print (colored(f'code status:{code}, currently running {cur_cmd},there are {N-cur_cmd} remaining to run','red','on_yellow'))
@@ -129,7 +126,7 @@ if __name__ =='__main__':
         else:
             fail_cnt +=1
             # print (colored(f'memory fail cnt inc 1:{fail_cnt}','red','on_yellow'))
-            if fail_cnt>120:
+            if fail_cnt>150:
                 print(colored('memory full, exit program', 'red', 'on_blue'))
                 schedule.cancel_job(job)
                 exit()
