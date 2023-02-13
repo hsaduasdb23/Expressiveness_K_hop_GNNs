@@ -41,8 +41,6 @@ class Model(pl.LightningModule):
         tenpercent = int(len(dataset) * 0.1)
         self.std = std
         self.lr= lr
-        print ('learning rate',self.lr)
-        print ('std:',std)
         self.weight_decay = weight_decay
         self.global_model = GlobalModel(dataset,out_dim,only_base_gnn,only_mhc,use_together,Base_GNN=self.get_base_gnn_model(base_gnn_str),base_dropout=base_dropout,ks_layer=mhc_layer,mhc_dropout=mhc_dropout,base_layer=base_layer,mhc_layer=mhc_num_layers,mhc_num_hops=mhc_num_hops,separate_conv = separate_conv,jk = jk,feature_fusion=feature_fusion,combine=combine,virtual_node=virtual_node,pooling_method=pooling_method)
         # d,out_dim,only_base_gnn=False,only_mhc=False,use_together=True,Base_GNN=GIN,base_dropout=0.5,ks_layer='gin',mhc_dropout=0.5,base_layer=2,mhc_layer=2,mhc_num_hops=4,separate_conv = True,jk = 'last',feature_fusion='weighted',combine='geometric'
@@ -117,7 +115,7 @@ class Model(pl.LightningModule):
                 self.test_mae = error
         self.val_mae = []
         self.global_model.train()
-        print (colored(f'task:{self.task_id}, Model comfig: {self.config_str}, current test mae at epoch {self.current_epoch}:{self.test_mae} and {self.test_mae/conversion[self.task_id]} after conversion,best validation mae:{self.best_val}','red','on_blue'))
+        print (colored(f'task:{self.task_id}, current best test mae at epoch {self.current_epoch}:{self.test_mae} and {self.test_mae/conversion[self.task_id]} after conversion,best validation mae:{self.best_val}','red','on_blue'))
 
 if __name__ =='__main__':
     d = Processed_Dataset(root='../data/subgraph_count/')
