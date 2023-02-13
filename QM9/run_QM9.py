@@ -130,22 +130,9 @@ if __name__ =='__main__':
     pl.seed_everything(12345)
     args = parser.parse_args()
     args = vars(args)
-    print (args)
     metrics = run_one_fold(**args)
     task = args['task']
-    saved_path = f'QM9_result/task_{task}/'
-    now = datetime.now()
 
-    dt_string = now.strftime("%Y-%m-%d-%H-%M-%S")+'.pkl'
-    if not path.exists(saved_path):
-        os.makedirs(saved_path,exist_ok=True)
-
-    with open(saved_path+dt_string,'wb') as f:
-        args['metric'] = metrics
-        pickle.dump(args,f)
-    print (f'final metric:{metrics}')
-
-    send_email(info=f'{dt_string}-{metrics}',msg='QM9')
 
 
 
