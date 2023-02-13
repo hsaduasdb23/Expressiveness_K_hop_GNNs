@@ -115,7 +115,7 @@ class Model(pl.LightningModule):
                 self.test_mae = error
         self.val_mae = []
         self.global_model.train()
-        print (colored(f'task:{self.task_id}, current best test mae at epoch {self.current_epoch}:{self.test_mae} and {self.test_mae/conversion[self.task_id]} after conversion,best validation mae:{self.best_val}','red','on_blue'))
+        print (colored(f'task:{self.task_id}, current best test mae at epoch {self.current_epoch}:{self.test_mae} and {self.test_mae/conversion[self.task_id]} after normalized conversion,best validation mae:{self.best_val/conversion[self.task_id]}','red','on_yellow'))
 
 if __name__ =='__main__':
     d = Processed_Dataset(root='../data/subgraph_count/')
