@@ -12,7 +12,6 @@ import torch.nn.functional as F
 import torch.optim as optim
 import pytorch_lightning as pl
 from torchmetrics import AUROC,Accuracy
-from send_email import send_email
 from QM9Dataset import QM9
 from termcolor import colored
 
