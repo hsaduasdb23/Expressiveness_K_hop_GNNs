@@ -33,8 +33,6 @@ from model.base_model import GCN,GIN,GraphSAGE
 import argparse
 import numpy as np
 import sys
-from send_email import send_email
-
 from dataset_processing import Processed_Dataset
 from torch_geometric.loader import DataLoader
 from termcolor import colored
