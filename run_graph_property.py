@@ -191,8 +191,6 @@ if __name__ =='__main__':
     pooling_method = args.pooling_method
     use_subset_feats = True if args.use_subset_feats == 1 else False
 
-    print ('dataset info:',graph_property_train)
-
     params = {'dataset_train':graph_property_train,'dataset_valid':graph_property_val,'dataset_test':graph_property_test,'out_dim':out_dims,'only_base_gnn':only_base_gnn,'only_mhc':only_mhc,'use_together':use_both,'base_gnn_str':base_gnn_model,'base_dropout':base_dropout,'mhc_layer':mhc_layer_name,'mhc_dropout':mhc_dropout,
               'base_layer':base_layer_num,'mhc_num_layers':mhc_layer_num,'mhc_num_hops':mhc_num_hops,'separate_conv':sep_conv,'jk':jk,'feature_fusion':feature_fusion,'combine':combine,'lr':lr,'weight_decay':weight_decay,'max_epochs':max_epochs,'fold_index':fold_index,'task':task,'use_ppgn':use_ppgn,'pooling_method':pooling_method,'use_subset_feats':use_subset_feats}
     print ('......................start running the experiments........................')
@@ -200,7 +198,6 @@ if __name__ =='__main__':
 
     validation_acc = []
     records = {}
-    print (colored(f'only run {fold_index}-th fold','red'))
     now = get_date_str()
     params['fold_index'] = fold_index
     # print (x[0])
