@@ -42,7 +42,7 @@ def get_per_fold_stats(root_name='resultV2/separate_run/',dataset = 'ALL'):
         if out is None:
             continue
         final_results.extend(out)
-    pd.DataFrame(final_results,columns=['dataset','params_config','best_acc_setting1','std_setting1','best_epoch_setting2','best_acc_setting2','std_setting2']).to_csv('results.csv')
+    pd.DataFrame(final_results,columns=['dataset','params_config','best_acc_setting1','std_setting1','best_epoch','best_acc_setting2','std_setting2']).to_csv('results.csv')
 
 
 
