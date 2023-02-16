@@ -112,7 +112,8 @@ if __name__ =='__main__':
         N = len(cmd_list)
         global cur_cmd,fail_cnt
         print(
-            colored(f'Please make sure there are 50% of free GPU memory to run the code, otherwise it will stuck. currently running {cur_cmd},there are {N - cur_cmd} remaining to run', 'red',
+            
+            colored(f'Current free memory percentage:{check_memory()}. Please make sure there are 50% of free GPU memory to run the code, otherwise it will stuck. currently running {cur_cmd},there are {N - cur_cmd} remaining to run', 'red',
                     'on_yellow'))
         if cur_cmd>=N:
             print (colored('done running cmds','red','on_blue'))
