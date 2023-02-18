@@ -24,7 +24,6 @@ The code relies on the following libraries:
   
     ```python run_gp_ppgn.py --use_ppgn 1 --hop 3 --task 0``` 
   
-  currently the code only supports 1-layer SEK-PPGN, which is used in our experiment. The dataset will be automatically preprocessed.
   
   ### Subgraph Count Dataset
   1. To run SEK-GIN, please follow these steps:
